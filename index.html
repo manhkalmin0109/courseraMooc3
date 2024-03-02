@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Preview</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #container {
+            text-align: center;
+        }
+        #image {
+            width: 400px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+
+        .preview {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 1px solid black;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .preview:hover {
+            border-color: red;
+        }
+        #undoButton {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+<div id="container">
+    <div id="image">Hover over an image below to display here.</div>
+    <img class="preview" src="images/image1.png" alt="Image 1">
+    <img class="preview" src="images/image2.png" alt="Image 2">
+    <img class="preview" src="images/image3.png" alt="Image 3">
+    <button id="undoButton">Undo</button>
+</div>
+
+
+    <script src="main.js"></script>
+
+</body>
+</html>
